@@ -1,6 +1,6 @@
 <?php
 if (isset($_GET['name'])) {
-    $name = $_GET['name']; // No input sanitization
+    $name = $_GET['name']; 
 } else {
     $name = "Guest";
 }
@@ -15,7 +15,7 @@ if (isset($_GET['name'])) {
     <title>XSS Example</title>
 </head>
 <body>
-    <h2>Welcome, <?php echo $name; ?>!</h2> <!-- Vulnerable to XSS -->
+    <h2>Welcome, <?php echo $name; ?>!</h2> 
     <form method="GET" action="">
         <label for="name">Enter your name:</label>
         <input type="text" id="name" name="name">
